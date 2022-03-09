@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Manrope:wght@800&family=Shizuru&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-dark {
+  width: 100vw;
+  height: 100%;
+  background: hsl(207, 26%, 17%);
+}
+
+.container-white{
+  width: 100vw;
+  height: 100%;
+  background: hsl(0, 0%, 98%);
+}
+
+.search-select {
+  width: 80vw;
+  margin: 2rem auto;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 0.6rem;
+  width: 30vw;
+  min-width: 300px;
+  background: hsl(209, 23%, 22%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-indent: 40px;
+  color: white;
+  font-family: 'Hubballi', cursive;
+  font-size: 16px;
+
+  /* align-items: center; */
+}
+
+.magnifying-glass {
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  font-family: 'Hubballi', cursive;
+  font-size: 12px;
+  padding-top: 20px;
+}
+
+.select {
+  padding: 0.6rem;
+  width: 15vw;
+  outline: none;
+  border: none;
+}
+
+.select > option {
+  padding: 0.6rem;
+}

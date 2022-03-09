@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Manrope:wght@800&family=Shizuru&display=swap");
+
+.dropdown {
+  width: 150px;
+  padding: 0.5rem;
+  color: white;
+  background: hsl(209, 23%, 22%);
+  user-select: none;
+  border-radius: 5px;
+  font-family: "Hubballi", cursive;
+  font-size: 20px;
+  margin-top: 1rem;
+
+  position: relative;
+  /* right: 0; */
+  /* top: 0; */
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.dropdown-content{
+
+  list-style: none;
+  width: 150px;
+  margin-top: 1rem;
+  background:hsl(209, 23%, 22%);
+  z-index: 10;
+  border-radius: 5px;
+    
+   position: absolute;
+   top: 2rem;
+   right: 0rem;
+
+
+}
+
+.dropdown-content_item{
+  padding: 0.5rem; 
+}
+
+.dropdown-content_item:first-child{
+
+  border-radius: 5px 5px 0px 0px;
+}
+
+.dropdown-content_item:last-child{
+
+  border-radius: 0px 0px 5px 5px;
+}
+
+.dropdown-content_item:hover{
+    background:hsl(207, 26%, 33%);
+}
