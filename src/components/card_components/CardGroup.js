@@ -10,22 +10,21 @@ function CardGroup({ searchValue, region, changeBackground }) {
     axios
       .get(`https://restcountries.com/v3.1/region/${region}`)
       .then((response) => setCountries(response.data))
-      .catch((err) => console.log(err));
+      .catch((err) => <hi>Error with Link</hi>);
   }, [region]);
 
-  // const DisplayCountries = () => {
-
+  // const FilterCountries = () => {
+  //   countries.filter((item) =>
+  //     item.name.common.toLowerCase().includes(searchValue.toLowerCase())
+  //   );
   // };
 
   return (
     <div className="card-group">
-      {console.log(countries)}
-
       {countries.map((item, i) => {
         return <Card key={i} name={item.name.common} flag={item.flags.png} />;
       })}
     </div>
   );
 }
-
 export default CardGroup;

@@ -11,32 +11,41 @@ function Home() {
   const [changeBackground, setChangeBackground] = useState(false);
 
   return (
-    <div className={changeBackground ? "container-white": "container-dark"}>
-      <NavBar changeBackground={changeBackground} setBackground={setChangeBackground} />
+    <div className={changeBackground ? "container-white" : "container-dark"}>
+      <NavBar
+        changeBackground={changeBackground}
+        setBackground={setChangeBackground}
+      />
 
       <div className="search-select">
-        <input
-          type="search"
-          name="search"
-          placeholder="Search for a country..."
-          value={searchValue}
-          className="search-input"
-          onChange={(e) => {
-            setSearchValue(e.target.value);
-          }}
-        />
+        <div className="search-bar">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search for a country..."
+            value={searchValue}
+            className="search-input"
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
+          />
 
-        <FontAwesomeIcon
-          icon="fa-magnifying-glass"
-          className="magnifying-glass"
-        />
+          <FontAwesomeIcon
+            icon="fa-magnifying-glass"
+            className="magnifying-glass"
+          />
+        </div>
 
         {/* DROPDOWN  */}
 
         <DropDown region={region} setRegion={setRegion} />
       </div>
 
-      <CardGroup searchValue={searchValue} region={region} changeBackground={changeBackground}/>
+      <CardGroup
+        searchValue={searchValue}
+        region={region}
+        changeBackground={changeBackground}
+      />
     </div>
   );
 }

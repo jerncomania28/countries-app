@@ -3,17 +3,18 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-.container-dark {
+
+body{
   width: 100vw;
   height: 100%;
+}
+.container-dark {
   background: hsl(207, 26%, 17%);
 }
 
 .container-white{
-  width: 100vw;
-  height: 100%;
+
   background: hsl(0, 0%, 98%);
 }
 
@@ -28,6 +29,18 @@
   flex-wrap: wrap;
 }
 
+
+.search-bar{
+  width: 30vw;
+  min-width: 300px;
+  /* padding: 0.1rem; */
+  /* border: 1px solid white; */
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
 .search-input {
   padding: 0.6rem;
   width: 30vw;
@@ -36,19 +49,21 @@
   border: none;
   outline: none;
   border-radius: 5px;
-  text-indent: 40px;
+  text-indent: 30px;
   color: white;
   font-family: 'Hubballi', cursive;
   font-size: 16px;
+  /* position: relative; */
 
   /* align-items: center; */
 }
 
 .magnifying-glass {
   position: absolute;
-  top: 1.3rem;
-  left: 1rem;
+  top: 0.7rem;
+  left:1rem;
   color: white;
+  width: 12px;
 }
 
 ::placeholder {
