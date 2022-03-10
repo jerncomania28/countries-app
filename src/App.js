@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/countries-app" element={<Home />} />
-
         </Routes>
       </BrowserRouter>
     </>
