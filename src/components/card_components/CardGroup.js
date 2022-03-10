@@ -13,24 +13,17 @@ function CardGroup({ searchValue, region, changeBackground }) {
       .catch((err) => console.log(err));
   }, [region]);
 
-  const DisplayCountries = () => {
+  // const DisplayCountries = () => {
 
-    return countries.filter(item=>{
-      if(searchValue===""){
-        return item;
-      }else if(item.name.common.toLowerCase().includes(searchValue.toLowerCase)){
-        return item
-      }
-    }).map((item, i) => {
-      return <Card key={i} name={item.name.common} flag={item.flags.png} />;
-    });
-  };
+  // };
 
   return (
     <div className="card-group">
       {console.log(countries)}
 
-      {DisplayCountries()}
+      {countries.map((item, i) => {
+        return <Card key={i} name={item.name.common} flag={item.flags.png} />;
+      })}
     </div>
   );
 }
