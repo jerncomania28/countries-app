@@ -9,6 +9,10 @@ body{
   width: 100vw;
   height: 100vh;
 }
+
+
+/* two containers for white an dark mode  */
+
 .container-dark {
   background: hsl(207, 26%, 17%);
   width: 100vw;
@@ -24,6 +28,8 @@ body{
   min-height: 100vh;
   min-width: 100vw;
 }
+
+/* end of second container */
 
 .search-select {
   width: 80vw;
