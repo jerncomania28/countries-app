@@ -2,9 +2,9 @@ import React from "react";
 import "../../style/Card.css";
 // import Test from "../../img/test.jpeg"
 
-function Card({name , flag}) {
+function Card({name , flag ,changeBackground}) {
   return (
-    <div className="card-container">
+    <div className="card-container" id ={changeBackground ? "white":"dark"}>
       
         <img
           src={flag}
