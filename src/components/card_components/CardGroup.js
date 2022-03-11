@@ -25,7 +25,7 @@ function CardGroup({ searchValue, region, changeBackground }) {
 
       {countries
         .filter( country => country.name.common.toLowerCase().includes(searchValue.toLowerCase()))
-        .map((item, i) => <Card key={i} name={item.name.common} flag={item.flags.png} /> )
+        .map((item, i) => <Card key={i} name={item.name.common} flag={item.flags.png} changeBackground={changeBackground} /> )
       }
     </div>
   );

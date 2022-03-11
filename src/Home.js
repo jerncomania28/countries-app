@@ -25,6 +25,7 @@ function Home() {
             placeholder="Search for a country..."
             value={searchValue}
             className="search-input"
+            id={changeBackground ? "white":"dark"}
             onChange={(e) => {
               setSearchValue(e.target.value);
             }}
@@ -33,12 +34,13 @@ function Home() {
           <FontAwesomeIcon
             icon="fa-magnifying-glass"
             className="magnifying-glass"
+            id={changeBackground ? "white":"dark"}
           />
         </div>
 
         {/* DROPDOWN  */}
 
-        <DropDown region={region} setRegion={setRegion} />
+        <DropDown region={region} setRegion={setRegion} changeBackground={changeBackground}/>
       </div>
 
       <CardGroup

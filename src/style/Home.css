@@ -5,8 +5,6 @@
   padding: 0;
 }
 
-
-
 /* two containers for white an dark mode  */
 
 .container-dark {
@@ -16,13 +14,24 @@
   overflow: hidden;
 }
 
-.container-white{
+.container-white {
   background: hsl(0, 0%, 98%);
   min-height: 100vh;
   min-width: 100vw;
 }
 
 /* end of second container */
+
+#dark {
+  color: white;
+  background: hsl(209, 23%, 22%);
+
+}
+#white {
+  color: black;
+  background: hsl(0, 0%, 98%);
+
+}
 
 .search-select {
   width: 80vw;
@@ -35,17 +44,16 @@
   flex-wrap: wrap;
 }
 
-
-.search-bar{
+.search-bar {
   width: 30vw;
   min-width: 300px;
   /* padding: 0.1rem; */
   /* border: 1px solid white; */
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .search-input {
   padding: 0.6rem;
@@ -56,8 +64,8 @@
   outline: none;
   border-radius: 5px;
   text-indent: 30px;
-  color: white;
-  font-family: 'Hubballi', cursive;
+  /* color: white; */
+  font-family: "Hubballi", cursive;
   font-size: 16px;
   /* position: relative; */
 
@@ -67,14 +75,14 @@
 .magnifying-glass {
   position: absolute;
   top: 0.7rem;
-  left:1rem;
-  color: white;
+  left: 1rem;
+  /* color: white; */
   width: 12px;
 }
 
 ::placeholder {
-  color: white;
-  font-family: 'Hubballi', cursive;
+  /* color: white; c */
+  font-family: "Hubballi", cursive;
   font-size: 12px;
   padding-top: 20px;
 }
