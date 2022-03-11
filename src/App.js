@@ -2,12 +2,15 @@ import React from "react";
 // import NavBar from "./components/Common/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {faCaretDown , faCaretUp , faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faCaretDown,
+  faCaretUp,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
+// import "./style/App.css"
 
-
-library.add(faCaretDown , faCaretUp , faMagnifyingGlass)
-
+library.add(faCaretDown, faCaretUp, faMagnifyingGlass);
 
 function App() {
   return (

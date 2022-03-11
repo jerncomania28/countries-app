@@ -3,7 +3,7 @@
 
 
 .nav-bar {
-  width: 100vw;
+  /* width: 100vw; */
   background: hsl(209, 23%, 22%);
   padding: 1rem 2rem;
   display: flex;
