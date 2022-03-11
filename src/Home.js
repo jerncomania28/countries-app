@@ -40,7 +40,7 @@ function Home() {
 
         {/* DROPDOWN  */}
 
-        <DropDown region={region} setRegion={setRegion} />
+        <DropDown region={region} setRegion={setRegion} changeBackground={changeBackground}/>
       </div>
 
       <CardGroup

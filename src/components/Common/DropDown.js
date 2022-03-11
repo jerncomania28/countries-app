@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../style/DropDown.css";
 
-function DropDown({ region, setRegion }) {
+function DropDown({ region, setRegion , changeBackground }) {
   const [isActive, setIsActive] = useState(false);
 
   const items = [
@@ -14,21 +14,22 @@ function DropDown({ region, setRegion }) {
   ];
 
   return (
-    <div className="dropdown">
+    <div className="dropdown" id={changeBackground ? "white":"dark"}>
       <div
         className="dropdown-header"
         onKeyPress={() => setIsActive(!isActive)}
         onClick={() => setIsActive(!isActive)}
       >
-        <div className="dropdown-header_text">{region}</div>
+        <div className="dropdown-header_text" id={changeBackground? "white":"black"}>{region}</div>
         <FontAwesomeIcon
           icon={isActive ? "fa-caret-up" : "fa-caret-down"}
           className="dropdown-icon"
+          id={changeBackground ? "white" : "black"}
         />
       </div>
 
       {isActive && (
-        <ul className="dropdown-content">
+        <ul className="dropdown-content" id={changeBackground ? "white":"dark"}>
           {items.map((item) => {
             return (
               <li
