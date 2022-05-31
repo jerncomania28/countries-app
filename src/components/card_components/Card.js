@@ -1,10 +1,16 @@
 import React from "react";
 import "../../style/Card.css";
+import {useNavigate} from 'react-router-dom';
 // import Test from "../../img/test.jpeg"
 
 function Card({name , flag ,changeBackground}) {
+
+  let navigate = useNavigate();
+
   return (
-    <div className="card-container" id ={changeBackground ? "white":"dark"}>
+    <div className="card-container" onClick={()=>{
+      navigate("/country/:country-id")
+    }} id ={changeBackground ? "white":"dark"}>
       
         <img
           src={flag}

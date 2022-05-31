@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import NavBar from "./components/Common/NavBar";
-import CardGroup from "./components/card_components/CardGroup";
-import "./style/Home.css";
-import DropDown from "./components/Common/DropDown";
+import React, { useState , useContext } from "react";
+import { CountriesContext } from "../../context/countries.context";
+import CardGroup from '../card_components/CardGroup';
+import DropDown from "../DropDown/dropDown.component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Home() {
+
+//styles 
+import './home.styles.scss';
+
+const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const [region, setRegion] = useState("africa");
-  const [changeBackground, setChangeBackground] = useState(false);
+
+  const {changeBackground} =  useContext(CountriesContext);
 
   return (
     <div className={changeBackground ? "container-white" : "container-dark"}>
-      <NavBar
-        changeBackground={changeBackground}
-        setBackground={setChangeBackground}
-      />
-
+     
       <div className="search-select">
         <div className="search-bar">
           <input

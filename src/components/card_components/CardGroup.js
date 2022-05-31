@@ -10,14 +10,8 @@ function CardGroup({ searchValue, region, changeBackground }) {
     axios
       .get(`https://restcountries.com/v3.1/region/${region}`)
       .then((response) => setCountries(response.data))
-      .catch((err) => <hi>Error with Link</hi>);
+      .catch((err) => <h1>Error with Link</h1>);
   }, [region]);
-
-  {console.log(countries)}
-
-  // const DisplayCountries = () => {
-
-  // };
 
   return (
     <div className="card-group">
