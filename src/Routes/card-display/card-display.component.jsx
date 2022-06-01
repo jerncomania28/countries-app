@@ -5,7 +5,7 @@ import { CountriesContext } from "../../context/countries.context.jsx";
 const CardDisplay = () => {
   const { name } = useParams();
   const { countries } = useContext(CountriesContext);
-  const [country, setCountry] = useState({});
+  const [country, setCountry] = useState();
 
   // READ 
   // i'm not sure why you did the below .. 
@@ -32,9 +32,9 @@ const CardDisplay = () => {
     const _country = countries.find(
       country => country.name.common.toLowerCase().includes(name.toLowerCase())
     );
+    // update the state 
     setCountry(_country);
-  }, [countries])
-
+  }, [countries]);
   
   return (
     <div className="card-display-container">
