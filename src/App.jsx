@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navigation />}>
+        <Route path="/countries-app" element={<Navigation />}>
           <Route index element={<Home />} />
           <Route path=":countryName" element={<CardDisplay />} />
         </Route>
