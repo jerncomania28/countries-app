@@ -30,7 +30,7 @@ const CardDisplay = () => {
           : "card-display-container container-dark"
       }
     >
-      <Link to="/" className="back-button" id={changeBackground ? "white" : "dark"}>
+      <Link to="/countries-app" className="back-button" id={changeBackground ? "white" : "dark"}>
         <FontAwesomeIcon
           icon="fa-arrow-left-long"
           className="back-arrow"
