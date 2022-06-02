@@ -11,7 +11,7 @@ const InputItem = ({ searchValue, setSearchValue, changeBackground }) => {
    }
 
   return (
-    <div className="home-top search-bar">
+    <div className="search-bar">
       <input
         type="search"
         name="search"

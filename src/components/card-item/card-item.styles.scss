@@ -7,13 +7,14 @@
     border-radius: 5px;
   }
   
-  #white {
+  #card-white {
     background: hsl(0, 0%, 98%);
     color: black;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
-  #dark {
-    background: hsl(198, 19%, 24%);
+  #card-dark {
+    color: white;
+    background: hsl(200, 17%, 24%);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   

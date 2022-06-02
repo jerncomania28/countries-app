@@ -19,18 +19,19 @@ const DropDown = () => {
   };
 
   return (
-    <div className="dropdown" id={changeBackground ? "white" : "dark"}>
-      <div className="dropdown-header" onClick={handleActive}>
-        <div
-          className="dropdown-header_text"
-          id={changeBackground ? "white" : "black"}
-        >
-          {region}
-        </div>
+    <div
+      className="dropdown"
+      id={changeBackground ? "dropdown-white" : "dropdown-dark"}
+    >
+      <div
+        className="dropdown-header"
+        onClick={handleActive}
+        id={changeBackground ? "dropdown-white" : "dropdown-dark"}
+      >
+        <div className="dropdown-header_text">{region}</div>
         <FontAwesomeIcon
           icon={isActive ? "fa-caret-up" : "fa-caret-down"}
           className="dropdown-icon"
-          id={changeBackground ? "white" : "black"}
         />
       </div>
 

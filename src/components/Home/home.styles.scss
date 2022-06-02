@@ -1,31 +1,24 @@
 /* two containers for white an dark mode  */
 
-.home-top{
-  margin-top: 4rem;
-}
 
 .container-dark {
   background: hsl(207, 26%, 17%);
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
+
+  // overflow: hidden;
 }
 
 .container-white {
   background: hsl(0, 0%, 98%);
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 /* end of second container */
 
 #dark {
   color: white;
-  background: hsl(209, 23%, 22%);
 }
 #white {
   color: black;
-  background: hsl(0, 0%, 98%);
+  // background: hsl(0, 0%, 98%);
 }
 
 .search-select {

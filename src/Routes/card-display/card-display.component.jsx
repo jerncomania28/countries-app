@@ -30,7 +30,11 @@ const CardDisplay = () => {
           : "card-display-container container-dark"
       }
     >
-      <Link to="/countries-app" className="back-button" id={changeBackground ? "white" : "dark"}>
+      <Link
+        to="/countries-app"
+        className="back-button"
+        id={changeBackground ? "white" : "dark"}
+      >
         <FontAwesomeIcon
           icon="fa-arrow-left-long"
           className="back-arrow"
@@ -38,7 +42,7 @@ const CardDisplay = () => {
         />
         Back
       </Link>
-      {country && (
+      {country ? (
         <div
           className="card-display-container-content"
           id={changeBackground ? "display-dark" : "display-white"}
@@ -82,15 +86,25 @@ const CardDisplay = () => {
             <div className="details-border-countries">
               <p>
                 <b>Border Countries</b> :{" "}
-                {country.borders
-                  .filter((itm, i) => i <= 2)
-                  .map((itm) => {
-                    return <button id={changeBackground ? "white": "dark"}>{itm}</button>;
-                  })}
+                {country.borders ? (
+                  country.borders
+                    .filter((itm, i) => i <= 2)
+                    .map((itm) => {
+                      return (
+                        <button id={changeBackground ? "white" : "dark"}>
+                          {itm}
+                        </button>
+                      );
+                    })
+                ) : (
+                  <span>Not Found</span>
+                )}
               </p>
             </div>
           </div>
         </div>
+      ) : (
+        <div>Page Not Found</div>
       )}
     </div>
   );

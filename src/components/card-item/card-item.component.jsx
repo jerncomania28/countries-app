@@ -19,7 +19,7 @@ const CardItem = ({ item, changeBackground }) => {
   return (
     <div
       className="card-container"
-      id={changeBackground ? "white" : "dark"}
+      id={changeBackground ? "card-white" : "card-dark"}
       onClick={handleNavigate}
     >
       <img src={svg} alt="img" className="image" />

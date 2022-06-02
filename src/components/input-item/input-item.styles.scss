@@ -1,37 +1,37 @@
-
 .search-bar {
-    width: 30vw;
-    min-width: 300px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .search-input {
-    padding: 1rem;
-    width: 30vw;
-    min-width: 300px;
-    background: hsl(209, 23%, 22%);
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    text-indent: 30px;
-    font-family: "Hubballi", cursive;
-    font-size: 16px;
+  width: 30vw;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.search-input {
+  padding: 1rem;
+  width: 30vw;
+  min-width: 300px;
+  background: hsl(209, 23%, 22%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-indent: 30px;
+  font-family: "Hubballi", cursive;
+  font-size: 16px;
+}
 
-  }
-  
-  .magnifying-glass {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    /* color: white; */
-    width: 12px;
-  }
-  
-  ::placeholder {
-    /* color: white; c */
-    font-family: "Hubballi", cursive;
-    font-size: 12px;
-    padding-top: 20px;
-  }
+.magnifying-glass {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  /* color: white; */
+  width: 12px;
+}
+
+::placeholder {
+  /* color: white; c */
+  font-family: "Hubballi", cursive;
+  font-size: 12px;
+  padding-top: 20px;
+}
