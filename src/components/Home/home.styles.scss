@@ -1,14 +1,17 @@
 /* two containers for white an dark mode  */
 
-
 .container-dark {
   background: hsl(207, 26%, 17%);
+  min-width: 100vw;
+  min-height: 100vh;
 
   // overflow: hidden;
 }
 
 .container-white {
   background: hsl(0, 0%, 98%);
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 /* end of second container */
