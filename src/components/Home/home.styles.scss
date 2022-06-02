@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Manrope:wght@800&family=Shizuru&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* two containers for white an dark mode  */
+
+.home-top{
+  margin-top: 4rem;
+}
 
 .container-dark {
   background: hsl(207, 26%, 17%);
@@ -25,12 +22,10 @@
 #dark {
   color: white;
   background: hsl(209, 23%, 22%);
-
 }
 #white {
   color: black;
   background: hsl(0, 0%, 98%);
-
 }
 
 .search-select {
@@ -42,49 +37,6 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.search-bar {
-  width: 30vw;
-  min-width: 300px;
-  /* padding: 0.1rem; */
-  /* border: 1px solid white; */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.search-input {
-  padding: 0.6rem;
-  width: 30vw;
-  min-width: 300px;
-  background: hsl(209, 23%, 22%);
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  text-indent: 30px;
-  /* color: white; */
-  font-family: "Hubballi", cursive;
-  font-size: 16px;
-  /* position: relative; */
-
-  /* align-items: center; */
-}
-
-.magnifying-glass {
-  position: absolute;
-  top: 0.7rem;
-  left: 1rem;
-  /* color: white; */
-  width: 12px;
-}
-
-::placeholder {
-  /* color: white; c */
-  font-family: "Hubballi", cursive;
-  font-size: 12px;
-  padding-top: 20px;
 }
 
 .select {

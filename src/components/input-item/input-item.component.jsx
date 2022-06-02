@@ -4,8 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./input-item.styles.scss";
 
 const InputItem = ({ searchValue, setSearchValue, changeBackground }) => {
+
+   const handleSearchValue = (e)=>{
+  
+      setSearchValue(e.target.value);
+   }
+
   return (
-    <div className="search-bar">
+    <div className="home-top search-bar">
       <input
         type="search"
         name="search"
@@ -13,9 +19,7 @@ const InputItem = ({ searchValue, setSearchValue, changeBackground }) => {
         value={searchValue}
         className="search-input"
         id={changeBackground ? "white" : "dark"}
-        onChange={(e) => {
-          setSearchValue(e.target.value);
-        }}
+        onChange={handleSearchValue}
       />
 
       <FontAwesomeIcon

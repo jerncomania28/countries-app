@@ -1,4 +1,4 @@
-import React, {useContext } from "react";
+import { useContext } from "react";
 import { CountriesContext } from "../../context/countries.context";
 import CardGroup from "../card-group/card-group.component";
 import DropDown from "../DropDown/dropDown.component";
@@ -8,7 +8,8 @@ import InputItem from "../input-item/input-item.component";
 import "./home.styles.scss";
 
 const Home = () => {
-  const {changeBackground, searchValue, setSearchValue} = useContext(CountriesContext);
+  const { changeBackground, searchValue, setSearchValue } =
+    useContext(CountriesContext);
 
   return (
     <div className={changeBackground ? "container-white" : "container-dark"}>

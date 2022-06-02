@@ -18,8 +18,7 @@ const CardGroup = () => {
         .map((item, i) => (
           <CardItem
             key={i}
-            name={item.name.common}
-            flag={item.flags.png}
+            item ={item}
             changeBackground={changeBackground}
           />
         ))}

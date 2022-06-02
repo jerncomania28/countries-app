@@ -1,45 +1,97 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { CountriesContext } from "../../context/countries.context.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+//styles
+import "./card-display.styles.scss";
 
 const CardDisplay = () => {
-  const { name } = useParams();
-  const { countries } = useContext(CountriesContext);
+  const { countryName } = useParams();
+  const { countries, changeBackground } = useContext(CountriesContext);
   const [country, setCountry] = useState();
 
-  // READ 
-  // i'm not sure why you did the below .. 
-  // it's can lead to an infinite loop hence an infinte rerender 
-  // until you crash or hit a proper error boundry 
-
-  // useEffect(() => {
-  //   countries &&
-  //     setCountry(
-  //       countries.find((country) => {
-  //         return country.name.common.toLowerCase().includes(name.toLowerCase());
-  //       })
-  //     );
-  // }, [name, countries]);
-
-  // READ
-  // you only want to find the country that was requested
-  // i see no reason why you even need to listen for changes in the countries array
-  // lemme know why ? then i'll mod it further 
-  useEffect( () => {
+  useEffect(() => {
     // we want to return early if the countries is not yet avaialble
-    if(!countries) return; 
+    if (!countries) return;
     // find the country and set it in the component state
-    const _country = countries.find(
-      country => country.name.common.toLowerCase().includes(name.toLowerCase())
+    const _country = countries.find((country) =>
+      country.name.common.toLowerCase().includes(countryName.toLowerCase())
     );
-    // update the state 
+    // update the state
     setCountry(_country);
-  }, [countries]);
-  
+  }, [countryName, countries]);
+
   return (
-    <div className="card-display-container">
-      <h1>Card Display</h1>
-      {country && <img src={country.flags.svg} alt="country" />}
+    <div
+      className={
+        changeBackground
+          ? "card-display-container container-white"
+          : "card-display-container container-dark"
+      }
+    >
+      <Link to="/" className="back-button" id={changeBackground ? "white" : "dark"}>
+        <FontAwesomeIcon
+          icon="fa-arrow-left-long"
+          className="back-arrow"
+          id={changeBackground ? "white" : "dark"}
+        />
+        Back
+      </Link>
+      {country && (
+        <div
+          className="card-display-container-content"
+          id={changeBackground ? "display-dark" : "display-white"}
+        >
+          <div className="image-container">
+            <img src={country.flags.svg} alt={"country"} />
+          </div>
+          <div className="details">
+            <h1>{country.name.common}</h1>
+            <div className="details-information">
+              <div className="details-information_first">
+                <p>
+                  <b>Native Name</b> :
+                  {Object.values(country.name.nativeName)[0].common}
+                </p>
+                <p>
+                  <b>Population</b> :{country.population}
+                </p>
+                <p>
+                  <b>Region</b> :{country.region}
+                </p>
+                <p>
+                  <b>Sub Region</b> :{country.subregion}
+                </p>
+                <p>
+                  <b>Capital</b> :{country.capital[0]}
+                </p>
+              </div>
+              <div className="details-information_second">
+                <p>
+                  <b>Top Level Domain</b> :{country.tld[0]}
+                </p>
+                <p>
+                  <b>Currencies</b> :{Object.values(country.currencies)[0].name}
+                </p>
+                <p>
+                  <b>Languages</b> :{Object.values(country.languages)[0]}
+                </p>
+              </div>
+            </div>
+            <div className="details-border-countries">
+              <p>
+                <b>Border Countries</b> :{" "}
+                {country.borders
+                  .filter((itm, i) => i <= 2)
+                  .map((itm) => {
+                    return <button id={changeBackground ? "white": "dark"}>{itm}</button>;
+                  })}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

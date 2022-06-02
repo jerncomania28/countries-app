@@ -1,0 +1,37 @@
+
+.search-bar {
+    width: 30vw;
+    min-width: 300px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .search-input {
+    padding: 1rem;
+    width: 30vw;
+    min-width: 300px;
+    background: hsl(209, 23%, 22%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-indent: 30px;
+    font-family: "Hubballi", cursive;
+    font-size: 16px;
+
+  }
+  
+  .magnifying-glass {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    /* color: white; */
+    width: 12px;
+  }
+  
+  ::placeholder {
+    /* color: white; c */
+    font-family: "Hubballi", cursive;
+    font-size: 12px;
+    padding-top: 20px;
+  }

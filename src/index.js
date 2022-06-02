@@ -7,11 +7,16 @@ import {
   faCaretDown,
   faCaretUp,
   faMagnifyingGlass,
+  faArrowLeftLong
 } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter } from "react-router-dom";
 import { CountriesProvider } from "./context/countries.context";
 
-library.add(faMoon, faCaretDown, faCaretUp, faMagnifyingGlass);
+//styles
+
+import "./index.styles.scss";
+
+library.add(faMoon, faCaretDown, faCaretUp, faMagnifyingGlass , faArrowLeftLong);
 
 const rootElement = document.getElementById("root");
 
