@@ -22,6 +22,10 @@ const CardDisplay = () => {
     setCountry(_country);
   }, [countryName, countries]);
 
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div
       className={
@@ -59,7 +63,7 @@ const CardDisplay = () => {
                   {Object.values(country.name.nativeName)[0].common}
                 </p>
                 <p>
-                  <b>Population</b> :{country.population}
+                  <b>Population</b> :{numberWithCommas(country.population)}
                 </p>
                 <p>
                   <b>Region</b> :{country.region}

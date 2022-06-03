@@ -16,6 +16,10 @@ const CardItem = ({ item, changeBackground }) => {
     navigate(`${common}`);
   };
 
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div
       className="card-container"
@@ -28,7 +32,7 @@ const CardItem = ({ item, changeBackground }) => {
         <h3 className="country_name">{common}</h3>
 
         <ul className="property_list">
-          <li>Population : {population}</li>
+          <li>Population : {numberWithCommas(population)}</li>
           <li>Region : {region}</li>
           <li>Capital : {capital && capital[0]}</li>
         </ul>
